@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 99%;
+    --foreground: 210 33% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden font-inter;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-lg border border-white/20 rounded-2xl;
+  }
+  
+  .glass-dark {
+    @apply bg-convrt-dark-blue/70 backdrop-blur-lg border border-white/10 rounded-2xl;
+  }
+  
+  .button-primary {
+    @apply bg-convrt-purple hover:bg-convrt-purple-hover text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-convrt-purple/20 dark:hover:shadow-convrt-purple/40 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none dark:bg-convrt-purple dark:hover:bg-convrt-purple-hover;
+  }
+  
+  .button-secondary {
+    @apply bg-convrt-dark-blue hover:bg-convrt-dark-blue/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-convrt-dark-blue/20 dark:hover:shadow-convrt-dark-blue/40 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none dark:bg-convrt-dark-blue/80 dark:hover:bg-convrt-dark-blue;
+  }
+  
+  .button-outline {
+    @apply border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm text-convrt-dark-blue dark:text-gray-200 font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:bg-convrt-light-gray dark:hover:bg-gray-700 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1];
+  }
+  
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold tracking-tight leading-tight;
+  }
+  
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold leading-snug;
+  }
+  
+  .heading-sm {
+    @apply text-xl md:text-2xl font-bold;
+  }
+  
+  .container-section {
+    @apply container max-w-7xl mx-auto px-6 md:px-8 py-6 md:py-10;
+  }
+
+  .container-section-1 {
+   @apply mx-auto px-6 sm:px-20 md:px-10 lg:px-6 xl:px-14 py-6;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-convrt-purple via-convrt-purple-light to-convrt-purple bg-clip-text text-transparent;
+  }
+  
+  .section-tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full bg-convrt-purple/5 text-convrt-purple text-sm font-medium mb-4;
+  }
+  
+  .feature-card {
+    @apply relative p-6 rounded-2xl bg-white border border-convrt-light-gray/60 transition-all duration-300 hover:shadow-xl hover:shadow-convrt-purple/5 hover:border-convrt-purple/20 hover:-translate-y-1;
+  }
+  
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  .animate-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  .animate-delay-700 {
+    animation-delay: 700ms;
+  }
+  
+  .animate-delay-800 {
+    animation-delay: 800ms;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in-out forwards;
+  }
+  
+  .animate-scale-in {
+    transform: scale(0.95);
+    opacity: 0;
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+  
+  .animate-floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  .bg-grid-pattern {
+    background-size: 20px 20px;
+    background-image: linear-gradient(to right, rgb(226 232 240 / 10%) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgb(226 232 240 / 10%) 1px, transparent 1px);
+  }
+  
+  .animate-smooth-float {
+    animation: smoothFloat 4s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes smoothFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+body {
+  background-image: 
+    radial-gradient(#e5e7eb 1px, transparent 1px),
+    linear-gradient(to bottom right, #f8fafc, #f3e8ff66, #dbeafe66);
+}
