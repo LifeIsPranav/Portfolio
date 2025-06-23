@@ -85,7 +85,7 @@ const ProductShowcase = () => {
           <div className="space-y-4">
             <div className="p-4 bg-[#F9F6F3] dark:bg-gray-700 rounded-lg border border-gray-100 dark:border-gray-600">
               <div className="flex items-center justify-between">
-                <div className="text-lg font-bold text-convrt-purple">Inventory Management System</div>
+                <div className="text-lg font-bold text-convrt-purple dark:text-white">Inventory Management System</div>
                 <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded text-xs font-medium">June 2025</span>
               </div>
               {/* <p className="text-gray-700 dark:text-gray-300 text-sm">
@@ -100,28 +100,28 @@ const ProductShowcase = () => {
               {/* <h4 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-3">Career Timeline:</h4> */}
               <h4 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-3">Notable Implementations:</h4>
               <ul className="space-y-1">
-                <li className="flex items-start justify-between">
+                <li className="px-1 py-1 font-semibold flex items-start justify-between">
                   <span className="flex">
                   <Rocket className="w-4 h-4 text-[#6936F5] mr-2 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-gray-700 dark:text-gray-300">Robust Backend APIs with Express</span>
                 </span>
                   {/* <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded text-xs font-bold">2022-2023</span> */}
                 </li>
-                <li className="flex items-start justify-between">
+                <li className="px-1 py-1 font-semibold flex items-start justify-between">
                   <span className="flex">
                   <Rocket className="w-4 h-4 text-[#6936F5] mr-2 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-gray-700 dark:text-gray-300">Designed modules for real-time inventory and SKU tracking</span>
                 </span>
                   {/* <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded text-xs font-bold">2022-2023</span> */}
                 </li>
-                <li className="flex items-start justify-between">
+                <li className="px-1 py-1 font-semibold flex items-start justify-between">
                   <span className="flex">
                   <Rocket className="w-4 h-4 text-[#6936F5] mr-2 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-gray-700 dark:text-gray-300">Implement user Authorization and Authentication</span>
                 </span>
                   {/* <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded text-xs font-bold">2022-2023</span> */}
                 </li>
-                <li className="flex items-start justify-between">
+                <li className="px-1 py-1 font-semibold flex items-start justify-between">
                   <span className="flex">
                   <Rocket className="w-4 h-4 text-[#6936F5] mr-2 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-gray-700 dark:text-gray-300">DTO layer to ensure crisp communication with Frontend</span>
@@ -160,7 +160,7 @@ const ProductShowcase = () => {
         <div className="space-y-4">
           <div className="p-4 bg-[#F9F6F3] dark:bg-gray-700 rounded-lg border border-gray-100 dark:border-gray-600">
             <div className="flex items-center justify-between mb-2">
-              <div className="text-lg font-bold text-convrt-purple">Undergrad in Computer Science</div>
+              <div className="text-lg font-bold text-convrt-purple dark:text-white">Undergrad in Computer Science</div>
               <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded text-xs font-bold">8.05 CGPA</span>
             </div>
             <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
@@ -175,23 +175,23 @@ const ProductShowcase = () => {
             <h4 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-3">Key Coursework:</h4>
             <ul className="space-y-1" >
               <li className="flex items-start justify-between">
-                <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded text-xs font-bold">Artificial Intelligence (AI)</span>
+                <span className="px-2 py-1 text-green-700 dark:text-green-300 rounded text-xs font-semibold">Artificial Intelligence (AI)</span>
                 <span className="text-sm text-gray-700 dark:text-gray-300">2025</span>
               </li>
               <li className="flex items-start justify-between">
-                <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded text-xs font-bold">Machine Learning</span>
+                <span className="px-2 py-1 text-blue-700 dark:text-blue-300 rounded text-xs font-semibold">Machine Learning</span>
                 <span className="text-sm text-gray-700 dark:text-gray-300">2025</span>
               </li>
               <li className="flex items-start justify-between">
-                <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded text-xs font-bold">Computer Networks and Operating System</span>
+                <span className="px-2 py-1 text-purple-700 dark:text-purple-300 rounded text-xs font-semibold">Computer Networks and Operating System</span>
                 <span className="text-sm text-gray-700 dark:text-gray-300">2025</span>
               </li>
               <li className="flex items-start justify-between">
-                <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded text-xs font-bold">Data Structures And Algorithms</span>
+                <span className="px-2 py-1 text-green-700 dark:text-green-300 rounded text-xs font-semibold">Data Structures And Algorithms</span>
                 <span className="text-sm text-gray-700 dark:text-gray-300">2024</span>
               </li>
               <li className="flex items-start justify-between">
-                <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded text-xs font-bold">Database Management Systems (DBMS)</span>
+                <span className="px-2 py-1 text-purple-700 dark:text-purple-300 rounded text-xs font-semibold">Database Management Systems (DBMS)</span>
                 <span className="text-sm text-gray-700 dark:text-gray-300">2024</span>
               </li>
             </ul>

@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import PortfolioCards from "../components/PortfolioCards";
 import ProductShowcase from "../components/ProductShowcase";
 import Testimonials from "../components/Testimonials";
+import VoiceEnabledChatbot from "../components/VoiceEnabledChatbot";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <ProductShowcase />
       <PortfolioCards />
       <Footer />
+      <VoiceEnabledChatbot />
     </div>
   );
 };

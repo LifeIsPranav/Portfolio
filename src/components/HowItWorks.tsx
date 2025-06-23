@@ -1,18 +1,47 @@
 import ImageSlider from "./how-it-works/ImageSlider";
 import PointTitle, { PointTitleData } from "./how-it-works/PointTitle";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, LineChart, Star, Target, Users } from "lucide-react";
+import { ChevronLeft, ChevronRight, Code, Container, Database, LineChart, Server, Star, Target, Users } from "lucide-react";
 
 const HowItWorks = () => {
   const [activeStep, setActiveStep] = useState(1);
   const [activePointTitle, setActivePointTitle] = useState(1);
+  const [isPaused, setIsPaused] = useState(false);
+  const [hoveredTech, setHoveredTech] = useState<string | null>(null);
+  const [tooltipPosition, setTooltipPosition] = useState<{ x: number; name: string } | null>(null);
 
   const steps = [
     {
       id: 1,
       icon: <Target className="w-5 h-5" />,
       title: "IMS - Inventory Management System (Backend)",
+      techStack : [
+        // Core Backend Technologies
+        { name: "Node.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", color: "#339933" },
+        { name: "Express.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", color: "#000000" },
+
+        // Database & ORM
+        { name: "MongoDB", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", color: "#47A248" },
+        { name: "Mongoose", image: "https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png", color: "#880000" },
+
+        // Authentication & Security
+        { name: "JWT", image: "https://cdn.auth0.com/blog/jwtalgos/logo.png", color: "#000000" },
+        { name: "bcrypt.js", image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fw5178b5d8nmldu4pzli8.jpg", color: "#F7DF1E" },
+
+        // Input Validation
+        { name: "Zod", image: "https://logo.svgcdn.com/l/zod.png", color: "#0768f6" },
+
+        // API Development & Testing
+        { name: "Postman", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", color: "#FF6C37" },
+
+        // Middleware & Utilities
+        { name: "CORS", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", color: "#F7DF1E" },
+
+        // Version Control
+        { name: "Git", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", color: "#F05032" },
+      ],
+
       pointTitles: [
         {
           id: 1,
@@ -48,87 +77,7 @@ const HowItWorks = () => {
           afterImage: "/images/folderIms.png"
         }
       ]
-    },
-    // {
-    //   id: 2,
-    //   icon: <Users className="w-5 h-5" />,
-    //   title: "AI Auto-Warms & Builds Trust",
-    //   pointTitles: [
-    //     {
-    //       id: 1,
-    //       title: "Contextual Engagement",
-    //       points: [
-    //         "Generate contextual comments and reactions",
-    //         "Share valuable insights in relevant discussions",
-    //         "Build relationship strength through consistent engagement"
-    //       ],
-    //       beforeImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800",
-    //       afterImage: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800"
-    //     },
-    //     {
-    //       id: 2,
-    //       title: "Trust Building Activities",
-    //       points: [
-    //         "Provide helpful resources and insights",
-    //         "Engage authentically in community discussions",
-    //         "Build credibility through valuable contributions"
-    //       ],
-    //       beforeImage: "/lovable-uploads/b939c8a7-93ac-46ac-95ed-e921f7705519.png",
-    //       afterImage: "/lovable-uploads/b13cfdf9-cae1-4483-b6ce-cadfe77c4755.png"
-    //     },
-    //     {
-    //       id: 3,
-    //       title: "Relationship Nurturing",
-    //       points: [
-    //         "Maintain consistent engagement over time",
-    //         "Personalize interactions based on user preferences",
-    //         "Track relationship warmth and engagement levels"
-    //       ],
-    //       beforeImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-    //       afterImage: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=800"
-    //     }
-    //   ]
-    // },
-    // {
-    //   id: 3,
-    //   icon: <LineChart className="w-5 h-5" />,
-    //   title: "AI Converts Warm Leads Into Pipeline",
-    //   pointTitles: [
-    //     {
-    //       id: 1,
-    //       title: "Optimal Timing Analysis",
-    //       points: [
-    //         "Identify optimal outreach timing and messaging",
-    //         "Leverage established trust for higher response rates",
-    //         "Track engagement analytics and conversion metrics"
-    //       ],
-    //       beforeImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-    //       afterImage: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=800"
-    //     },
-    //     {
-    //       id: 2,
-    //       title: "Pipeline Conversion",
-    //       points: [
-    //         "Convert warm relationships into qualified leads",
-    //         "Personalized outreach based on engagement history",
-    //         "Measure and optimize conversion rates"
-    //       ],
-    //       beforeImage: "/lovable-uploads/6fb32475-404a-4483-b6ce-cadfe77c4755.png",
-    //       afterImage: "/lovable-uploads/50d7bc89-98fd-49a5-b67f-94230c5d3ca5.png"
-    //     },
-    //     {
-    //       id: 3,
-    //       title: "Results Tracking",
-    //       points: [
-    //         "Monitor lead quality and conversion rates",
-    //         "Track ROI and campaign effectiveness",
-    //         "Generate detailed analytics and reports"
-    //       ],
-    //       beforeImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
-    //       afterImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
-    //     }
-    //   ]
-    // }
+    }
   ];
 
   const currentStep = steps.find(step => step.id === activeStep);
@@ -215,7 +164,7 @@ dark:[background-size:16px_16px]
         >
           <div className="flex flex-col lg:flex-row shadow-2xl shadow-purple-500/20 dark:shadow-purple-500/10 ">
             {/* Left Side - Step Titles and Point Titles */}
-            <div className="lg:w-1/3 p-8 bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-700/50 dark:to-gray-800 border-r border-gray-200 dark:border-gray-700">
+            <div className="lg:w-1/3 p-8 pb-0 bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-700/50 dark:to-gray-800 border-r border-gray-200 dark:border-gray-700">
               {/* Step Header */}
               <div className="mb-8">
                 <div className="flex items-center gap-4 mb-4">
@@ -272,6 +221,84 @@ dark:[background-size:16px_16px]
                   </motion.button>
                 ))}
               </div>
+
+              {/* Tech Stack Carousel - floating in free space */}
+              {currentStep?.techStack && (
+                <div
+                  key={`tech-${activeStep}`}
+                  className="mt-12 relative overflow-visible"
+                  style={{ height: '40px' }}
+                  onMouseEnter={() => setIsPaused(true)}
+                  onMouseLeave={() => {
+                    setIsPaused(false);
+                    setTooltipPosition(null);
+                  }}
+                >
+                  {/* Dynamic tooltip positioned above the hovered icon */}
+                  {tooltipPosition && (
+                    <div 
+                      className="absolute -top-8 bg-gray-900 dark:bg-gray-800 text-white text-xs px-3 py-1 rounded-lg shadow-xl z-[100] pointer-events-none whitespace-nowrap border border-gray-700"
+                      style={{ 
+                        left: `${tooltipPosition.x}px`,
+                        transform: 'translateX(-50%)'
+                      }}
+                    >
+                      {tooltipPosition.name}
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900 dark:border-t-gray-800"></div>
+                    </div>
+                  )}
+
+                  {/* Fade gradients on left and right */}
+                  <div className="absolute left-0 top-0 w-8 h-full z-20 pointer-events-none"></div>
+                  <div className="absolute right-0 top-0 w-8 h-full z-20 pointer-events-none"></div>
+                  
+                  <div className="relative h-full w-full flex items-center overflow-hidden">
+                    <motion.div
+                      className="flex gap-4"
+                      animate={isPaused ? {} : { 
+                        x: [0, -(currentStep.techStack.length * 64)]
+                      }}
+                      transition={{
+                        duration: currentStep.techStack.length * 2.5,
+                        repeat: Infinity,
+                        ease: "linear",
+                        repeatType: "loop"
+                      }}
+                      style={{ 
+                        width: `${currentStep.techStack.length * 64 * 4}px`,
+                        willChange: 'transform'
+                      }}
+                    >
+                      {[...currentStep.techStack, ...currentStep.techStack, ...currentStep.techStack, ...currentStep.techStack].map((tech, techIndex) => (
+                        <div
+                          key={`${tech.name}-${techIndex}`}
+                          className="flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-150 flex-shrink-0"
+                          style={{ width: '60px', height: '40px' }}
+                          onMouseEnter={(e) => {
+                            setHoveredTech(`${tech.name}-${techIndex}`);
+                            const rect = e.currentTarget.getBoundingClientRect();
+                            const containerRect = e.currentTarget.closest('.relative')?.getBoundingClientRect();
+                            if (containerRect) {
+                              const relativeX = rect.left - containerRect.left + rect.width / 2;
+                              setTooltipPosition({ x: relativeX, name: tech.name });
+                            }
+                          }}
+                          onMouseLeave={() => {
+                            setHoveredTech(null);
+                            setTooltipPosition(null);
+                          }}
+                        >
+                          <img 
+                            src={tech.image}
+                            alt={tech.name}
+                            className="h-5 object-contain drop-shadow-sm" 
+                          />
+                        </div>
+                      ))}
+                    </motion.div>
+                  </div>
+                </div>
+              )}
             </div>
             
             {/* Right Side - Image */}
@@ -357,7 +384,7 @@ dark:[background-size:16px_16px]
                 <div className="flex items-center gap-3 border-l border-gray-300 dark:border-gray-600 pl-6">
                   <button 
                     onClick={prevStep}
-                    className="flex items-center px-5 py-2 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition-all duration-300 text-gray-700 dark:text-gray-300 shadow-xl hover:shadow-2xl border border-2 border-convrt-purple dark:border-gray-700"
+                    className="flex items-center px-5 py-2 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition-all duration-300 text-gray-700 dark:text-gray-300 shadow-xl hover:shadow-2xl border-2 border-convrt-purple dark:border-gray-700"
                   >
                     <ChevronLeft className="w-4 h-4 " />
                   </button>
@@ -378,7 +405,7 @@ dark:[background-size:16px_16px]
                   
                   <button 
                     onClick={nextStep}
-                    className="flex items-center px-5 py-2 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition-all duration-300 text-gray-700 dark:text-gray-300 shadow-xl hover:shadow-2xl border border-2 border-convrt-purple dark:border-gray-700"
+                    className="flex items-center px-5 py-2 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition-all duration-300 text-gray-700 dark:text-gray-300 shadow-xl hover:shadow-2xl border-2 border-convrt-purple dark:border-gray-700"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </button>

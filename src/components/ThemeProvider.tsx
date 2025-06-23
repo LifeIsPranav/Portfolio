@@ -1,5 +1,4 @@
-
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = 'light' | 'dark';
 
@@ -22,9 +21,16 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [theme, setTheme] = useState<Theme>('light');
 
   useEffect(() => {
+    // Force clear any existing theme to ensure light mode default
+    localStorage.removeItem('theme');
+    
     const savedTheme = localStorage.getItem('theme') as Theme;
-    if (savedTheme) {
+    if (savedTheme && (savedTheme === 'light' || savedTheme === 'dark')) {
       setTheme(savedTheme);
+    } else {
+      // If no saved theme or invalid theme, default to light and save it
+      setTheme('light');
+      localStorage.setItem('theme', 'light');
     }
   }, []);
 
