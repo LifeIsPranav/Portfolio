@@ -1,6 +1,5 @@
-
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { ChevronRight, Move } from 'lucide-react';
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { ChevronRight, Move } from "lucide-react";
 
 interface ImageSliderProps {
   beforeImage: string;
@@ -107,8 +106,8 @@ const ImageSlider = ({
         />
         
         {/* Before Label */}
-        <div className="absolute top-3 left-3 bg-red-500/90 text-white px-2 py-1 rounded-full text-xs font-semibold backdrop-blur-sm">
-          The Interface
+        <div className="absolute top-3 left-3 bg-red-500/90 text-white px-2 py-1 rounded-full text-xs font-semibold backdrop-blur-sm shadow-gray-600 shadow-md ring-">
+          Interface you See
         </div>
       </div>
 
@@ -129,8 +128,8 @@ const ImageSlider = ({
         />
         
         {/* After Label */}
-        <div className="absolute top-3 right-3 bg-green-500/90 text-white px-2 py-1 rounded-full text-xs font-semibold backdrop-blur-sm">
-          How I engineered it
+        <div className="absolute top-3 right-3 bg-green-500/90 text-white px-2 py-1 rounded-full text-xs font-semibold backdrop-blur-sm shadow-black shadow-md">
+          Infrastructure I Wired
         </div>
       </div>
 

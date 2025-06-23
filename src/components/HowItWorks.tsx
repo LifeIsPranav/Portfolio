@@ -15,6 +15,77 @@ const HowItWorks = () => {
     {
       id: 1,
       icon: <Target className="w-5 h-5" />,
+      title: "AlgoCode - End-to-End Coding Platform (from Scratch)",
+      techStack : [
+        // Core Backend Technologies
+        { name: "Node.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", color: "#339933" },
+        { name: "Express.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", color: "#000000" },
+        { name: "TypeScript", image: "https://static.cdnlogo.com/logos/t/96/typescript.svg", color: "#000000" },
+        { name: "Docker", image: "https://static.cdnlogo.com/logos/d/8/docker.svg", color: "#000000" },
+        { name: "Redis - Cache & Queue", image: "https://static.cdnlogo.com/logos/r/3/redis.svg", color: "#000000" },
+        { name: "Fastify", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastify/fastify-original.svg", color: "#0768f6" },
+
+        // Database & ORM
+        { name: "MongoDB", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", color: "#47A248" },
+        { name: "Mongoose", image: "https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png", color: "#880000" },
+
+        // Authentication & Security
+        { name: "JWT", image: "https://cdn.auth0.com/blog/jwtalgos/logo.png", color: "#000000" },
+        { name: "bcrypt.js", image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fw5178b5d8nmldu4pzli8.jpg", color: "#F7DF1E" },
+
+        // Input Validation
+        { name: "Zod", image: "https://logo.svgcdn.com/l/zod.png", color: "#0768f6" },
+
+        // API Development & Testing
+        { name: "Postman", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", color: "#FF6C37" },
+
+        // Middleware & Utilities
+        { name: "CORS", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", color: "#F7DF1E" },
+        { name: "JSON", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg", color: "#F7DF1E" },
+
+        // Version Control
+        { name: "Git", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", color: "#F05032" },
+      ],
+
+      pointTitles: [
+        {
+          id: 1,
+          title: "Code Execution Engine",
+          points: [
+            "Dynamic ID-to-SKU Mapping",
+            "Real-time Stock Level Tracking",
+            "Low Stock Flags on Product Fetch"
+          ],
+          beforeImage: "/images/algoFront1.png",
+          afterImage: "/images/algoB3.png"
+        },
+        {
+          id: 2,
+          title: "Queuing mech. to dispatch code to execution containers",
+          points: [
+            "JWT Authentication & Protected Routes",
+            "Input Validation & Error Handling Middleware",
+            "Role-Based Access (i.e., Admin vs. Staff)"
+          ],
+          beforeImage: "/images/subm.png",
+          afterImage: "/images/submB.png"
+        },
+        {
+          id: 3,
+          title: "Microservices Arch. for Modularity and Scalability",
+          points: [
+            "Modular Controller-Service-Repo Pattern",
+            "Centralized Error & Success Response Handling",
+            "Clean, versioned endpoints for easy extension and testing"
+          ],
+          beforeImage: "/images/algoHLD.jpeg",
+          afterImage: "/images/inf.png"
+        }
+      ]
+    },
+    {
+      id: 2,
+      icon: <Target className="w-5 h-5" />,
       title: "IMS - Inventory Management System (Backend)",
       techStack : [
         // Core Backend Technologies
