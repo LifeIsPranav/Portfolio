@@ -2,7 +2,7 @@ import ImageSlider from "./how-it-works/ImageSlider";
 import PointTitle, { PointTitleData } from "./how-it-works/PointTitle";
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Code, Container, Database, LineChart, Server, Star, Target, Users } from "lucide-react";
+import { ChevronLeft, ChevronRight, Code, Container, Database, ExternalLink, LineChart, Server, Star, Target, Users } from "lucide-react";
 
 const HowItWorks = () => {
   const [activeStep, setActiveStep] = useState(1);
@@ -16,6 +16,7 @@ const HowItWorks = () => {
       id: 1,
       icon: <Target className="w-5 h-5" />,
       title: "AlgoCode - End-to-End Coding Platform (from Scratch)",
+      websiteUrl: "https://github.com/LifeIsPranav/AC-Problem-Service", // Add your actual website URL here
       techStack : [
         // Core Backend Technologies
         { name: "Node.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", color: "#339933" },
@@ -87,6 +88,7 @@ const HowItWorks = () => {
       id: 2,
       icon: <Target className="w-5 h-5" />,
       title: "IMS - Inventory Management System (Backend)",
+      websiteUrl: "https://inventory-ms-be.vercel.app/", // Add your actual website URL here
       techStack : [
         // Core Backend Technologies
         { name: "Node.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", color: "#339933" },
@@ -243,9 +245,18 @@ dark:[background-size:16px_16px]
                     {activeStep}
                   </div> */}
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-convrt-dark-blue dark:text-white leading-tight">
-                      {currentStep?.title}
-                    </h3>
+                    <a
+                      href={currentStep?.websiteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline hover:text-convrt-purple transition-colors duration-200"
+                      title="Visit project website"
+                    >
+                      <h3 className="text-xl font-bold text-convrt-dark-blue dark:text-white leading-tight group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-200 inline">
+                        {currentStep?.title}
+                      </h3>
+                      <ExternalLink className="w-4 h-4 text-black font-extrabold dark:text-gray-400 group-hover:text-convrt-purple transition-colors duration-200 inline ml-2" />
+                    </a>
                   </div>
                 </div>
               </div>
