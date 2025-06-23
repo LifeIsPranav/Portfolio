@@ -53,9 +53,9 @@ const HowItWorks = () => {
           id: 1,
           title: "Code Execution Engine",
           points: [
-            "Dynamic ID-to-SKU Mapping",
-            "Real-time Stock Level Tracking",
-            "Low Stock Flags on Product Fetch"
+            "Supports multiple languages with Dockerized environments",
+            "Executes user-submitted code in isolated containers",
+            "Captures stdout, stderr, and handles time/memory limits"
           ],
           beforeImage: "/images/algoFront1.png",
           afterImage: "/images/algoB3.png"
@@ -64,9 +64,9 @@ const HowItWorks = () => {
           id: 2,
           title: "Queuing mech. to dispatch code to execution containers",
           points: [
-            "JWT Authentication & Protected Routes",
-            "Input Validation & Error Handling Middleware",
-            "Role-Based Access (i.e., Admin vs. Staff)"
+            "Built custom job queue using BullMQ & Redis",
+            "Submissions enqueued and dispatched to workers efficiently",
+            "Real-time status updates with WebSockets"
           ],
           beforeImage: "/images/subm.png",
           afterImage: "/images/submB.png"
@@ -75,9 +75,9 @@ const HowItWorks = () => {
           id: 3,
           title: "Microservices Arch. for Modularity and Scalability",
           points: [
-            "Modular Controller-Service-Repo Pattern",
-            "Centralized Error & Success Response Handling",
-            "Clean, versioned endpoints for easy extension and testing"
+            "Separated: Problem, Submission and Execution Services",
+            "RESTful APIs with clean versioning and validation layers",
+            "Scalable design using Fastify & modular service patterns"
           ],
           beforeImage: "/images/algoHLD.jpeg",
           afterImage: "/images/inf.png"
