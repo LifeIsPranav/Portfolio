@@ -30,7 +30,7 @@ const PortfolioCards = () => {
       ],
       color: "from-gray-700 to-gray-900",
       textColor: "text-white",
-      link: "https://github.com/yourusername"
+      link: "https://github.com/lifeispranav"
     },
     {
       title: "LeetCode",
@@ -44,7 +44,7 @@ const PortfolioCards = () => {
       ],
       color: "from-orange-600 to-yellow-500",
       textColor: "text-white",
-      link: "https://leetcode.com/yourusername"
+      link: "https://leetcode.com/lifeispranav"
     },
     // {
     //   title: "CodeForces",
