@@ -65,6 +65,7 @@ export class GeminiChatService {
       projects: [
         {
           name: "Algocode: Microservices-Driven Coding Platform",
+          url: "https://github.com/LifeIsPranav/AC-Problem-Service",
           description: "My flagship project - a comprehensive coding platform with dynamic code execution engine using Docker for secure, isolated code runs across 5+ programming languages.",
           keyFeatures: [
             "Dynamic code execution engine using Docker for secure & isolated runs",
@@ -79,6 +80,7 @@ export class GeminiChatService {
         },
         {
           name: "Inventory Management API - Backend & Frontend",
+          url: "https://inventory-ms-be.vercel.app/",
           description: "Full-stack inventory management platform with role-based access control and real-time tracking capabilities.",
           keyFeatures: [
             "Scalable RESTful backend with modular architecture",
@@ -89,19 +91,6 @@ export class GeminiChatService {
             "Clean DTO architecture with versioned routing (/api/v1/)"
           ],
           tech: ["Node.js", "Express.js", "JWT", "bcrypt", "DTOs", "MVC", "RESTful APIs"]
-        },
-        {
-          name: "RTC Backend: End-to-End Instant Messaging Platform",
-          description: "Low-latency real-time chat application backend with comprehensive messaging features.",
-          keyFeatures: [
-            "WebSocket-based real-time communication using Socket.io",
-            "TCP-based duplex communication channels",
-            "One-to-one messaging, group chats, and typing indicators",
-            "MongoDB with Mongoose for user authentication and chat history",
-            "Session management and efficient data querying",
-            "Modular, scalable codebase for easy debugging and maintenance"
-          ],
-          tech: ["Node.js", "Socket.io", "MongoDB", "Mongoose", "WebSockets", "TCP"]
         }
       ],
 
@@ -257,7 +246,7 @@ Key achievements:
 • ${algocodeProject.keyFeatures[1]}
 • ${algocodeProject.keyFeatures[2]}
 
-Built with ${algocodeProject.tech.join(", ")}. Check it out at ${algocodeProject.url}!`;
+Built with ${algocodeProject.tech.join(", ")}.`;
       }
       return `Algocode is my flagship coding platform with Docker execution engine. Achieved 30% faster response times using Redis queuing and Socket.IO.`;
     }
