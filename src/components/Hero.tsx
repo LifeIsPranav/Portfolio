@@ -54,7 +54,7 @@ dark:[background-size:16px_16px]
           </motion.p>
           
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-            <a target='_blank' href="https://drive.google.com/file/d/1rqp8_bOEj-SAyQBvpoDhCB9QT3QTf3oo/view?usp=drive_link" className="button-primary flex items-center group font-inter font-medium">
+            <a target='_blank' href="https://docs.google.com/presentation/d/1ZEkmb-mmfWAq9VvNYqCkISMk2uJye3b536Qnncv9dPo/edit?usp=sharing" className="button-primary flex items-center group font-inter font-medium">
               Checkout My Resume
               <File className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </a>
