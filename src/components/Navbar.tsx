@@ -41,7 +41,7 @@ const Navbar = () => {
 
             <ModernThemeToggle />
             </span>
-            <motion.a target='_blank' href="https://drive.google.com/file/d/1rqp8_bOEj-SAyQBvpoDhCB9QT3QTf3oo/view?usp=drive_link" className="bg-gradient-to-r from-convrt-purple to-convrt-purple-light text-white px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:shadow-lg hover:shadow-convrt-purple/25 transform hover:scale-105" whileHover={{
+            <motion.a target='_blank' href="https://docs.google.com/presentation/d/1ZEkmb-mmfWAq9VvNYqCkISMk2uJye3b536Qnncv9dPo/edit?usp=sharing" className="bg-gradient-to-r from-convrt-purple to-convrt-purple-light text-white px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:shadow-lg hover:shadow-convrt-purple/25 transform hover:scale-105" whileHover={{
             scale: 1.05
           }} whileTap={{
             scale: 0.95
